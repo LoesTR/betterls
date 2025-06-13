@@ -9,13 +9,19 @@ config_text = ""
 
 if usros == "Windows":
     if os.path.isfile("C:\\betterls_config.json") == True:
-        pass
+        configfile = open("C:\\betterls_config.json", "w")
+        jsondata = json.loads(configfile.read)
+        config_text = jsondata["text"]
+        configfile.close()
     elif os.path.isfile("C:\\betterls_config.json") == False:
         configfile = open("C:\\betterls_config.json", "w")
         configfile.close()
 elif usros == "Linux":
     if os.path.isfile("~/betterls_config.json") == True:
-        pass
+        configfile = open("C:\\betterls_config.json", "w")
+        jsondata = json.loads(configfile.read)
+        config_text = jsondata["text"]
+        configfile.close()
     elif os.path.isfile("~/betterls_config.json") == False:
         configfile = open("~/betterls_config.json", "w")
         configfile.close()
