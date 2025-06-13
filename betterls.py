@@ -2,7 +2,7 @@ import os
 import json
 import platform
 
-sros = platform.system()
+usros = platform.system()
 files = os.listdir()
 
 config_text = ""
