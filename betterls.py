@@ -54,7 +54,7 @@ elif usros == "Linux":
         config_text = jsondata["lstext"]
         configfile.close()
         checkconferrors()
-        if(config_header != ""):
+        if config_header != "":
             headeroutput = config_header.replace("{path}", os.getcwd())
             print(headeroutput + "\n\n")
         for i in files:
